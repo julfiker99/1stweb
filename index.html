@@ -11,45 +11,84 @@
             background-color: #1a1a1a;
             color: #f8f9fa;
         }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
         .hero-section {
             text-align: center;
-            padding: 50px 0;
+            padding: 60px 0;
         }
+
         .hero-section h1 {
             color: #00d1ff;
         }
-        .hero-section p {
-            font-size: 1.2rem;
+
+        .icons-row a {
+            margin: 0 10px;
+            color: #00d1ff;
+            font-size: 1.5rem;
+            text-decoration: none;
         }
-        .portfolio-card {
-            background-color: #333;
-            border: none;
+
+        .portfolio-section {
+            text-align: center;
+            padding: 50px 0;
         }
+
+        .highlight-text {
+            color: #00d1ff;
+            font-weight: bold;
+        }
+
         .footer {
             background-color: #000;
             padding: 20px;
             text-align: center;
         }
+
         .footer a {
             color: #00d1ff;
             margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- Header -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Gias Uddin</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a class="navbar-brand" href="#">
+            <img src="https://via.placeholder.com/40" alt="Logo"> My Portfolio
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                 <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-primary btn-sm" href="path/to/resume.pdf" download>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v4.6h8V9.9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v4.6a1 1 0 0 1-1 1H1.5a1 1 0 0 1-1-1V9.9z"/>
+                            <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3.5 3.5a.5.5 0 1 1-.708.708L8.5 2.707V10.5a.5.5 0 0 1-1 0V2.707L5.354 5.354a.5.5 0 1 1-.708-.708l3.5-3.5z"/>
+                        </svg>
+                        Download
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -58,56 +97,77 @@
 <!-- Hero Section -->
 <section class="hero-section">
     <div class="container">
-        <h1>HI! I'M GIAS UDDIN</h1>
-        <p>Web Developer || React Developer || Programmer</p>
-        <a href="#" class="btn btn-primary">Download Resume</a>
-    </div>
-</section>
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Portfolio</h2>
         <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-6 mb-4">
-                <div class="card portfolio-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Online University</h5>
-                        <p class="card-text">
-                            A travel service agency website allowing users to log in via Facebook or Google,
-                            and select their preferred services.
-                        </p>
-                        <p><strong>Technologies:</strong> React, Firebase, HTML, CSS, Node.js</p>
-                    </div>
+            <!-- Left Column -->
+            <div class="col-md-8">
+                <h1>Hi! I'M SKM JULFIKER ALI</h1>
+                <p>MEDICAL STUDENT || TEACHER || Programmer</p>
+                <div class="icons-row">
+                    <a href="path/to/resume.pdf" download><i class="fab fa-github"></i> GitHub</a>
+                    <a href="path/to/resume.pdf" download><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="path/to/resume.pdf" download><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="path/to/resume.pdf" download>Resume</a>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="col-md-6 mb-4">
-                <div class="card portfolio-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Another Project</h5>
-                        <p class="card-text">Description of another project with a brief overview.</p>
-                        <p><strong>Technologies:</strong> React, MongoDB, Express.js</p>
-                    </div>
-                </div>
+            <!-- Right Column -->
+            <div class="col-md-4 text-center">
+                <img src="https://via.placeholder.com/300" alt="Profile Picture" class="img-fluid rounded-circle">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="py-5 bg-dark">
+<!-- Portfolio Section -->
+<section class="portfolio-section" id="portfolio">
+    <h2>Portfolio</h2>
+</section>
+
+<!-- Projects Section -->
+<section class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Skills</h2>
-        <div class="row text-center">
+        <div class="row">
+            <!-- Left Column (Image) -->
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/500" alt="Project Image" class="img-fluid">
+            </div>
+            <!-- Right Column (Text) -->
+            <div class="col-md-6">
+                <h3>Shaheed Tajuddin Ahmad MEdical College</h3>
+                <p>Shaheed Tajuddin Ahmad Medical College is a government medical school in Bangladesh, established in 2013. It is located in Gazipur. The college is affiliated with University of Dhaka as a constituent college. It offers a five-year MBBS degree programme and admits 100 students every year..</p>
+                <p>Key Features: <span class="highlight-text">Firebase, React, Node.js</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Left Column (Image) -->
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/500" alt="Project Image" class="img-fluid">
+            </div>
+            <!-- Right Column (Text) -->
+            <div class="col-md-6">
+                <h3>Shaheed Tajuddin Ahmad MEdical College</h3>
+                <p>
+                    Shaheed Tajuddin Ahmad Medical College is a government medical school in Bangladesh, established in 2013. It is located in Gazipur. The college is affiliated with University of Dhaka as a constituent college. It offers a five-year MBBS degree programme and admits 100 students every year..</p>
+                <p>Key Features: <span class="highlight-text">Firebase, React, Node.js</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Skills</h2>
+        <div class="row">
             <div class="col-md-4">
                 <h4>Expertise</h4>
-                <p>React.js, JavaScript, Node.js</p>
+                <p>React.js, Node.js, JavaScript</p>
             </div>
             <div class="col-md-4">
                 <h4>Comfortable</h4>
-                <p>SQL, TypeScript, Docker</p>
+                <p>SQL, Docker, AWS</p>
             </div>
             <div class="col-md-4">
                 <h4>Tools</h4>
@@ -118,21 +178,21 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-5">
+<section class="py-5" id="contact">
     <div class="container">
-        <h2 class="text-center mb-4">Contact Me</h2>
-        <form>
+        <h2 class="text-center">Contact With Me</h2>
+        <form class="mt-4" action="#" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Type your message"></textarea>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
@@ -141,10 +201,10 @@
 
 <!-- Footer -->
 <footer class="footer">
-    <p>&copy; 2021 Gias Uddin | Kunming, Yunnan, China</p>
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">YouTube</a>
+    <p>&copy; 2024 SKM Julfiker ALi || Joydebpur, Gazipur, BangladeSh</p>
+    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
 </footer>
 
 <!-- Bootstrap JS -->
